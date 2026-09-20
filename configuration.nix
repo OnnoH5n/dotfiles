@@ -36,10 +36,18 @@
     onActivation.extraFlags = [ "--force" ];
     brews = [
       "herdr"
+      "gh"
+      "zoxide"
+      "fzf"
+      "eza"
+      "bat"
+      "fd"
     ];
     casks = [
       "wezterm"
+      "ghostty"
       "claude-code"
+      "copilot-cli"
     ];
   };
 }
