@@ -34,14 +34,11 @@
     onActivation.cleanup = "zap";  # remove anything not listed here
     onActivation.autoUpdate = true;
     onActivation.extraFlags = [ "--force" ];
+    # Homebrew earns its place only where Nix is weak on darwin: GUI app
+    # bundles, tools that update themselves, and anything not in nixpkgs.
+    # Plain CLI tools live in home.nix, where flake.lock pins their versions.
     brews = [
-      "herdr"
-      "gh"
-      "zoxide"
-      "fzf"
-      "eza"
-      "bat"
-      "fd"
+      "herdr"  # own tap, not packaged in nixpkgs
     ];
     casks = [
       "wezterm"

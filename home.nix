@@ -12,7 +12,6 @@ in
     # cli i use constantly
     ripgrep   # fast search
     fd        # fast find
-    fzf       # fuzzy finder
     jq        # json on the command line
     lazygit
     neovim
@@ -21,6 +20,14 @@ in
   ];
   fonts.fontconfig.enable = true;
   home.sessionVariables.EDITOR = "nvim";
+
+  # Moved off Homebrew. These modules install the package and wire up the
+  # shell integration too, which a bare entry in home.packages does not.
+  programs.fzf.enable = true;     # ctrl-r history search, ctrl-t file search
+  programs.zoxide.enable = true;  # the `z` jump command
+  programs.eza.enable = true;
+  programs.bat.enable = true;
+  programs.gh.enable = true;
 
   programs.zsh = {
     enable = true;
