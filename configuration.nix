@@ -39,12 +39,14 @@
     # Plain CLI tools live in home.nix, where flake.lock pins their versions.
     brews = [
       "herdr"  # own tap, not packaged in nixpkgs
+      "go"
     ];
     casks = [
       "wezterm"
       "ghostty"
       "claude-code"
       "copilot-cli"
+      "visual-studio-code"
     ];
   };
 }
